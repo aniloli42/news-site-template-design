@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin: 0 auto;
+  border-bottom: 1px solid;
+  padding: 8px 15px;
+}
+
+span.material-icons {
+  font-family: "Material Icons";
+}
+
+header .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+
+header .header-top .header-title h1 {
+  font-size: 50px;
+}
+
+header .header-top .header-ads img {
+  width: 728px;
+  height: 90px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav .nav-item a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header nav .nav-item a:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: underline;
+}
+
+.content-div {
+  display: flex;
+  padding: 15px;
+  gap: 30px;
+}
+
+.content-div .left-div {
+  flex-basis: 70%;
+  align-items: center;
+}
+
+.content-div .left-div .content-header {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 10px 0px 10px 10px;
+}
+
+.content-div .left-div .content-header h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.content-div .right-div {
+  flex-basis: 30%;
+}
+
+.content-div .right-div .search-div,
+.content-div .right-div .popular-div {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.content-div .right-div .search-div .search-title,
+.content-div .right-div .popular-div .popular-title {
+  width: 100%;
+  background-color: #f3f3f3;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 20px;
+}
+
+.content-div .right-div .search-div .search-body form {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.content-div .right-div .search-div .search-body form input {
+  flex-basis: 80%;
+  height: 30px;
+  min-width: 30%;
+  padding: 5px 10px;
+}
+
+.content-div .right-div .search-div .search-body form button {
+  flex-basis: 20%;
+  height: 30px;
+  cursor: pointer;
+}
+
+.content-div .right-div .popular-div .popular-body {
+  width: 100%;
+}
+
+.content-div .right-div .popular-div .popular-body .popular-content {
+  display: flex;
+  height: 60px;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.content-div
+  .right-div
+  .popular-div
+  .popular-body
+  .popular-content
+  .popular-image-div {
+  flex-basis: 80px;
+}
+
+.content-div
+  .right-div
+  .popular-div
+  .popular-body
+  .popular-content
+  .popular-image-div
+  img {
+  width: 80px;
+  height: 60px;
+}
+
+.content-div
+  .right-div
+  .popular-div
+  .popular-body
+  .popular-content
+  .popular-content-wrapper {
+  flex-basis: auto;
+  padding: 1px 0px;
+}
+
+.content-div
+  .right-div
+  .popular-div
+  .popular-body
+  .popular-content
+  .popular-content-wrapper
+  .popular-content-title {
+  font-weight: bold;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.content-div
+  .right-div
+  .popular-div
+  .popular-body
+  .popular-content
+  .popular-content-wrapper
+  .popular-content-date {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.content-div
+  .right-div
+  .popular-div
+  .popular-body
+  .popular-content
+  .popular-content-wrapper
+  .popular-content-date
+  span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.content-div .left-div .main-div .main-content {
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.content-div .left-div .main-div .main-content .main-image-div {
+  flex-basis: 80px;
+}
+
+.content-div .left-div .main-div .main-content .main-image-div img {
+  width: 200px;
+  height: 150px;
+}
+
+.content-div .left-div .main-div .main-content .main-content-wrapper {
+  flex-basis: auto;
+  padding: 1px 0px;
+}
+
+.content-div
+  .left-div
+  .main-div
+  .main-content
+  .main-content-wrapper
+  .main-content-title {
+  font-weight: bold;
+  word-wrap: break-word;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.content-div
+  .left-div
+  .main-div
+  .main-content
+  .main-content-wrapper
+  .main-content-date {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.content-div
+  .left-div
+  .main-div
+  .main-content
+  .main-content-wrapper
+  .main-content-date
+  span {
+  font-size: 14px;
+  color: #aaa;
+}
