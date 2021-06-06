@@ -22,7 +22,7 @@
   text-transform: uppercase;
   font-weight: bold;
   padding: 10px 0px 10px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* End Common CSS */
@@ -48,6 +48,61 @@ header .header-top {
   height: 90px;
 }
 
+.menu-bar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 0;
+  padding: 5px;
+  user-select: none;
+}
+
+.menu-bar p {
+  margin-right: 5px;
+}
+
+.menu-bar .bars {
+  width: 20px;
+  height: 2px;
+  background-color: var(--dark);
+  position: relative;
+}
+
+.menu-bar .bars::before,
+.menu-bar .bars::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: var(--dark);
+  transition: all 200ms ease-in-out;
+  position: absolute;
+}
+
+.menu-bar .bars::before {
+  top: -5px;
+}
+
+.menu-bar .bars::after {
+  top: 5px;
+}
+
+.menu-bar.open .bars {
+  height: 0;
+  background-color: transparent;
+}
+
+.menu-bar.open .bars::before {
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-bar.open .bars::after {
+  position: absolute;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 header .header-top .header-title h1 {
   font-size: 50px;
   color: var(--dark);
@@ -61,6 +116,8 @@ header .header-top .header-ads img {
 header nav {
   display: flex;
   gap: 20px;
+  transform: none;
+  max-height: 50px;
 }
 
 header nav .nav-item a {
@@ -78,8 +135,8 @@ header nav .nav-item a:hover {
 
 .content-div {
   display: flex;
-  padding: 15px;
-  gap: 30px;
+  padding: 10px;
+  gap: 20px;
 }
 
 .content-div .left-div {
@@ -137,7 +194,6 @@ header nav .nav-item a:hover {
   display: flex;
   height: 90px;
   gap: 15px;
-  background-color: var(--lightb);
   margin: 5px 0;
   padding: 5px;
 }
@@ -220,7 +276,7 @@ header nav .nav-item a:hover {
 }
 
 .content-div .left-div .main-div {
-  background-color: var(--lightb);
+  /* background-color: var(--lightb); */
   padding: 5px 5px;
   margin-top: 10px;
 }
@@ -352,4 +408,113 @@ header nav .nav-item a:hover {
   background-color: var(--lightdark);
   border: none;
   color: var(--light);
+}
+
+.footer-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container .footer-bottom {
+  margin-bottom: 0;
+}
+
+.footer-container .footer-bottom p {
+  text-align: center;
+}
+.footer-container .footer-top {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.footer-container .footer-top .footer-top-section {
+  flex-basis: 25%;
+  margin-bottom: 5px;
+}
+
+.footer-container .footer-top .footer-top-section .footer-section-title {
+  margin-bottom: 10px;
+}
+
+.footer-container .footer-top .footer-top-section .footer-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-container .footer-top .footer-top-section .footer-section-content a {
+  text-decoration: none;
+  color: var(--dark);
+  padding: 5px 0;
+  padding-left: 10px;
+}
+
+.footer-container
+  .footer-top
+  .footer-top-section
+  .footer-section-content
+  a::hover {
+  color: var(--lightdark);
+}
+
+@media all and (max-width: 1024px) {
+  header .header-top {
+    flex-direction: column;
+    height: auto;
+  }
+
+  header .header-top .header-title h1 {
+    font-size: 2.5rem;
+  }
+
+  header nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 960px) {
+  .content-div {
+    flex-direction: column;
+  }
+  header .header-top .header-ads {
+    display: flex;
+    justify-content: center;
+  }
+  header .header-top .header-ads,
+  header .header-top .header-ads img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-div .left-div .main-div .main-content {
+    flex-direction: column;
+  }
+
+  .content-div .left-div .main-div .main-content .main-image-div a img {
+    width: 100%;
+  }
+
+  .footer-container .footer-top {
+    flex-direction: column;
+  }
+
+  .menu-bar {
+    display: flex;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transform: scaleY(0);
+    max-height: 0;
+    transition: all 500ms ease-in-out;
+    transform-origin: center;
+  }
 }

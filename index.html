@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-    />
+    /> -->
     <title>Spread knowledge | TAN NEWS</title>
   </head>
   <body>
@@ -21,7 +21,11 @@
           <img src="./imgs/header_ads.png" alt="header ads" />
         </div>
       </div>
-      <nav>
+      <div class="menu-bar" id="menuBar">
+        <p>Menu</p>
+        <div class="bars"></div>
+      </div>
+      <nav id="navBar">
         <div class="nav-item"><a href="#">Home</a></div>
         <div class="nav-item"><a href="#">Categories</a></div>
         <div class="nav-item"><a href="#">Business</a></div>
@@ -36,6 +40,35 @@
           <h2>Recent News</h2>
         </div>
         <div class="main-contents">
+          <div class="main-div">
+            <div class="main-content">
+              <div class="main-image-div">
+                <a href="#"><img src="./imgs/img2.png" alt="Popular" /></a>
+              </div>
+              <div class="main-content-wrapper">
+                <div class="main-content-title">
+                  <a href="#">Today Corona Cases Decreases</a>
+                </div>
+                <div class="main-content-date">
+                  <span class="material-icons">person</span>Anil Oli&nbsp;<span
+                    class="material-icons"
+                    >schedule</span
+                  >2078-02-17 08:30 PM
+                </div>
+                <div class="main-content-description">
+                  <p>
+                    Today Corona Cases Decreases, PM oli said that we are very
+                    happy to said that our nation is going to free from the
+                    afraid of COVID 19...
+                  </p>
+                </div>
+                <div class="main-content-read-more">
+                  <a href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="main-div">
             <div class="main-content">
               <div class="main-image-div">
@@ -124,32 +157,34 @@
         </div>
       </div>
     </section>
-
+    <hr />
     <footer class="footer-container">
       <!-- footer top -->
       <div class="footer-top">
-        <!-- 3 tabs -->
         <div class="footer-top-section">
-          <div class="footer-section-title">TOP LINKS</div>
-          <div class="footer-section-content"></div>
+          <div class="footer-section-title common-title-bar">Categories</div>
+          <div class="footer-section-content">
+            <a href="#">Sports</a><a href="#">Business</a
+            ><a href="#">Education</a><a href="#">Agriculture</a
+            ><a href="#">Commerical</a>
+          </div>
         </div>
         <div class="footer-top-section">
-          <div class="footer-section-title"></div>
-          <div class="footer-section-content"></div>
-        </div>
-        <div class="footer-top-section">
-          <div class="footer-section-title"></div>
-          <div class="footer-section-content"></div>
+          <div class="footer-section-title common-title-bar">TOP LINKS</div>
+          <div class="footer-section-content">
+            <a href="#">CTEVT Website</a><a href="#">TAN Facebook Page</a
+            ><a href="#">Wikipedia</a>
+          </div>
         </div>
       </div>
       <!-- footer-bottom -->
-      <div class="footer-bottom" id="footerBotttom">
+      <div class="footer-bottom common-title-bar" id="footerBottom common">
         <p>Copyright &copy; TAN News <span id="getYear"></span></p>
       </div>
     </footer>
     <!-- Own Js -->
     <script>
-      let currentYear = new Date();
+      const currentYear = new Date();
       document.getElementById("getYear").innerHTML = currentYear.getFullYear();
     </script>
     <script src="./js/script.js" defer></script>
