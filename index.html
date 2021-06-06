@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -18,10 +18,7 @@
           <h1 class="title">TAN NEWS</h1>
         </div>
         <div class="header-ads">
-          <img
-            src="https://i.pinimg.com/originals/03/67/58/036758d5d5f03634e1f466a5b9fcfcff.png"
-            alt="header ads"
-          />
+          <img src="./imgs/header_ads.png" alt="header ads" />
         </div>
       </div>
       <nav>
@@ -35,29 +32,41 @@
 
     <section class="content-div">
       <div class="left-div">
-        <div class="content-header">
-          <h2>Trending News</h2>
+        <div class="content-header common-title-bar">
+          <h2>Recent News</h2>
         </div>
         <div class="main-contents">
           <div class="main-div">
             <div class="main-content">
               <div class="main-image-div">
-                <img
-                  src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
-                  alt="Popular"
-                />
+                <a href="#"><img src="./imgs/img2.png" alt="Popular" /></a>
               </div>
               <div class="main-content-wrapper">
                 <div class="main-content-title">
-                  Today Corona Cases Decreases
+                  <a href="#">Today Corona Cases Decreases</a>
                 </div>
                 <div class="main-content-date">
-                  <span class="material-icons">schedule</span>2078-02-17 08:30
-                  PM
+                  <span class="material-icons">person</span>Anil Oli&nbsp;<span
+                    class="material-icons"
+                    >schedule</span
+                  >2078-02-17 08:30 PM
+                </div>
+                <div class="main-content-description">
+                  <p>
+                    Today Corona Cases Decreases, PM oli said that we are very
+                    happy to said that our nation is going to free from the
+                    afraid of COVID 19...
+                  </p>
+                </div>
+                <div class="main-content-read-more">
+                  <a href="#">Read More</a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="pagination">
+          <div><a href="#">1</a></div>
         </div>
       </div>
 
@@ -65,7 +74,7 @@
       <div class="right-div">
         <!-- search div -->
         <div class="search-div">
-          <div class="search-title">Search</div>
+          <div class="search-title common-title-bar">Search</div>
           <div class="search-body">
             <form method="GET">
               <input
@@ -81,18 +90,15 @@
 
         <!-- popular div -->
         <div class="popular-div">
-          <div class="popular-title">Popular News</div>
+          <div class="popular-title common-title-bar">Popular News</div>
           <div class="popular-body">
             <div class="popular-content">
               <div class="popular-image-div">
-                <img
-                  src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
-                  alt="Popular"
-                />
+                <a href="#"><img src="./imgs/img2.png" alt="Popular" /></a>
               </div>
               <div class="popular-content-wrapper">
                 <div class="popular-content-title">
-                  Today Corona Cases Decreases
+                  <a href="#">Today Corona Cases Decreases</a>
                 </div>
                 <div class="popular-content-date">
                   <span class="material-icons">schedule</span>2078-02-17 08:30
@@ -102,14 +108,11 @@
             </div>
             <div class="popular-content">
               <div class="popular-image-div">
-                <img
-                  src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3"
-                  alt="Popular"
-                />
+                <a href="#"><img src="./imgs/img2.png" alt="Popular" /></a>
               </div>
               <div class="popular-content-wrapper">
                 <div class="popular-content-title">
-                  Today Corona Cases Decreases
+                  <a href="#">Today Corona Cases Decreases</a>
                 </div>
                 <div class="popular-content-date">
                   <span class="material-icons">schedule</span>2078-02-17 08:30
@@ -121,7 +124,34 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer-container">
+      <!-- footer top -->
+      <div class="footer-top">
+        <!-- 3 tabs -->
+        <div class="footer-top-section">
+          <div class="footer-section-title">TOP LINKS</div>
+          <div class="footer-section-content"></div>
+        </div>
+        <div class="footer-top-section">
+          <div class="footer-section-title"></div>
+          <div class="footer-section-content"></div>
+        </div>
+        <div class="footer-top-section">
+          <div class="footer-section-title"></div>
+          <div class="footer-section-content"></div>
+        </div>
+      </div>
+      <!-- footer-bottom -->
+      <div class="footer-bottom" id="footerBotttom">
+        <p>Copyright &copy; TAN News <span id="getYear"></span></p>
+      </div>
+    </footer>
     <!-- Own Js -->
-    <script src="/js/script.js" defer></script>
+    <script>
+      let currentYear = new Date();
+      document.getElementById("getYear").innerHTML = currentYear.getFullYear();
+    </script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>

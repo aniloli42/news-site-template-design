@@ -1,8 +1,34 @@
+:root {
+  --light: #fff;
+  --black: #000;
+  --dark: #334443;
+  --lightdark: #34656d;
+  --lightb: rgb(250, 244, 244);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Common CSS*/
+.common-title-bar {
+  width: 100%;
+  background-color: var(--lightdark);
+  font-size: 16px;
+  color: var(--light);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 20px;
+}
+
+/* End Common CSS */
+
+body {
+  background-color: var(--light);
 }
 
 header {
@@ -24,6 +50,7 @@ header .header-top {
 
 header .header-top .header-title h1 {
   font-size: 50px;
+  color: var(--dark);
 }
 
 header .header-top .header-ads img {
@@ -38,14 +65,14 @@ header nav {
 
 header nav .nav-item a {
   text-decoration: none;
-  color: #000;
+  color: var(--dark);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
 }
 
 header nav .nav-item a:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--lightdark);
   text-decoration: underline;
 }
 
@@ -60,35 +87,18 @@ header nav .nav-item a:hover {
   align-items: center;
 }
 
-.content-div .left-div .content-header {
-  width: 100%;
-  background-color: #f3f3f3;
-  padding: 10px 0px 10px 10px;
-}
-
 .content-div .left-div .content-header h2 {
   font-size: 16px;
   text-transform: uppercase;
+  color: var(--light);
 }
 
 .content-div .right-div {
   flex-basis: 30%;
 }
 
-.content-div .right-div .search-div,
-.content-div .right-div .popular-div {
+.content-div .right-div .search-div {
   width: 100%;
-  margin-bottom: 20px;
-}
-
-.content-div .right-div .search-div .search-title,
-.content-div .right-div .popular-div .popular-title {
-  width: 100%;
-  background-color: #f3f3f3;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 10px 0px 10px 10px;
   margin-bottom: 20px;
 }
 
@@ -110,17 +120,26 @@ header nav .nav-item a:hover {
   flex-basis: 20%;
   height: 30px;
   cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5%;
 }
 
+.content-div .right-div .popular-div {
+  margin-bottom: 10px;
+  width: 100%;
+}
 .content-div .right-div .popular-div .popular-body {
   width: 100%;
 }
 
 .content-div .right-div .popular-div .popular-body .popular-content {
   display: flex;
-  height: 60px;
+  height: 90px;
   gap: 15px;
-  margin: 10px 0;
+  background-color: var(--lightb);
+  margin: 5px 0;
+  padding: 5px;
 }
 
 .content-div
@@ -130,6 +149,9 @@ header nav .nav-item a:hover {
   .popular-content
   .popular-image-div {
   flex-basis: 80px;
+  width: 80px;
+  height: 80px;
+  background-color: var(--lightb);
 }
 
 .content-div
@@ -138,9 +160,10 @@ header nav .nav-item a:hover {
   .popular-body
   .popular-content
   .popular-image-div
+  a
   img {
   width: 80px;
-  height: 60px;
+  height: 80px;
 }
 
 .content-div
@@ -159,11 +182,14 @@ header nav .nav-item a:hover {
   .popular-body
   .popular-content
   .popular-content-wrapper
-  .popular-content-title {
+  .popular-content-title
+  a {
+  text-decoration: none;
   font-weight: bold;
   word-wrap: break-word;
   font-size: 16px;
   line-height: 20px;
+  color: var(--dark);
 }
 
 .content-div
@@ -178,7 +204,7 @@ header nav .nav-item a:hover {
   align-items: center;
   gap: 3px;
   font-size: 12px;
-  color: #aaa;
+  color: var(--lightdark);
 }
 
 .content-div
@@ -190,22 +216,28 @@ header nav .nav-item a:hover {
   .popular-content-date
   span {
   font-size: 12px;
-  color: #aaa;
+  color: var(--lightdark);
 }
 
+.content-div .left-div .main-div {
+  background-color: var(--lightb);
+  padding: 5px 5px;
+  margin-top: 10px;
+}
 .content-div .left-div .main-div .main-content {
-  margin: 10px 0;
   display: flex;
   gap: 15px;
 }
 
 .content-div .left-div .main-div .main-content .main-image-div {
-  flex-basis: 80px;
+  background-color: var(--lightb);
+  min-width: 200px;
+  height: 200px;
 }
 
-.content-div .left-div .main-div .main-content .main-image-div img {
+.content-div .left-div .main-div .main-content .main-image-div a img {
   width: 200px;
-  height: 150px;
+  height: 200px;
 }
 
 .content-div .left-div .main-div .main-content .main-content-wrapper {
@@ -218,11 +250,14 @@ header nav .nav-item a:hover {
   .main-div
   .main-content
   .main-content-wrapper
-  .main-content-title {
+  .main-content-title
+  a {
+  text-decoration: none;
   font-weight: bold;
   word-wrap: break-word;
   font-size: 24px;
   line-height: 30px;
+  color: var(--dark);
 }
 
 .content-div
@@ -231,12 +266,12 @@ header nav .nav-item a:hover {
   .main-content
   .main-content-wrapper
   .main-content-date {
-  margin-top: 5px;
+  margin: 5px 0 10px;
   display: flex;
   align-items: center;
   gap: 3px;
   font-size: 14px;
-  color: #aaa;
+  color: var(--lightdark);
 }
 
 .content-div
@@ -247,5 +282,74 @@ header nav .nav-item a:hover {
   .main-content-date
   span {
   font-size: 14px;
-  color: #aaa;
+  color: var(--lightdark);
+}
+
+.content-div
+  .left-div
+  .main-div
+  .main-content
+  .main-content-wrapper
+  .main-content-description {
+  word-wrap: break-word;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--lightdark);
+}
+
+.content-div
+  .left-div
+  .main-div
+  .main-content
+  .main-content-wrapper
+  .main-content-read-more
+  a {
+  width: 100px;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  color: var(--light);
+  display: block;
+  background-color: var(--dark);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.content-div
+  .left-div
+  .main-div
+  .main-content
+  .main-content-wrapper
+  .main-content-read-more
+  a:hover {
+  background-color: var(--lightdark);
+}
+
+.content-div .left-div .pagination {
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+  gap: 10px;
+}
+
+.content-div .left-div .pagination div a {
+  display: inline-block;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid var(--dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.content-div .left-div .pagination div a:hover {
+  background-color: var(--lightdark);
+  border: none;
+  color: var(--light);
 }
