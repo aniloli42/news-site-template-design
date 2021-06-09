@@ -204,9 +204,9 @@ header nav .nav-item a:hover {
   .popular-body
   .popular-content
   .popular-image-div {
-  flex-basis: 80px;
-  width: 80px;
-  height: 80px;
+  flex-basis: 160px;
+  width: 160px;
+  height: 90px;
   background-color: var(--lightb);
 }
 
@@ -218,8 +218,8 @@ header nav .nav-item a:hover {
   .popular-image-div
   a
   img {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 90px;
 }
 
 .content-div
@@ -243,8 +243,7 @@ header nav .nav-item a:hover {
   text-decoration: none;
   font-weight: bold;
   word-wrap: break-word;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
   color: var(--dark);
 }
 
@@ -287,13 +286,13 @@ header nav .nav-item a:hover {
 
 .content-div .left-div .main-div .main-content .main-image-div {
   background-color: var(--lightb);
-  min-width: 200px;
-  height: 200px;
+  width: 320px;
+  height: 180px;
 }
 
 .content-div .left-div .main-div .main-content .main-image-div a img {
-  width: 200px;
-  height: 200px;
+  width: 320px;
+  height: 180px;
 }
 
 .content-div .left-div .main-div .main-content .main-content-wrapper {
@@ -310,9 +309,7 @@ header nav .nav-item a:hover {
   a {
   text-decoration: none;
   font-weight: bold;
-  word-wrap: break-word;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 20px;
   color: var(--dark);
 }
 
@@ -459,7 +456,7 @@ header nav .nav-item a:hover {
   color: var(--lightdark);
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1200px) {
   header .header-top {
     flex-direction: column;
     height: auto;
@@ -472,6 +469,16 @@ header nav .nav-item a:hover {
   header nav {
     justify-content: center;
     margin-top: 10px;
+  }
+
+  .content-div
+    .left-div
+    .main-div
+    .main-content
+    .main-content-wrapper
+    .main-content-title
+    a {
+    font-size: 18px;
   }
 }
 
@@ -491,13 +498,15 @@ header nav .nav-item a:hover {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 730px) {
   .content-div .left-div .main-div .main-content {
     flex-direction: column;
   }
 
+  .content-div .left-div .main-div .main-content .main-image-div,
   .content-div .left-div .main-div .main-content .main-image-div a img {
     width: 100%;
+    height: auto;
   }
 
   .footer-container .footer-top {
@@ -515,6 +524,6 @@ header nav .nav-item a:hover {
     transform: scaleY(0);
     max-height: 0;
     transition: all 500ms ease-in-out;
-    transform-origin: center;
+    transform-origin: top bottom;
   }
 }
