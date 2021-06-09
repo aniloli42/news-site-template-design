@@ -13,4 +13,12 @@ menuBar.addEventListener("click", (e) => {
     navBar.style.cssText = "transform:scaleY(0);";
     navBar.style.maxHeight = "0px";
   }
+
+  [...navBar.children].some((item) => {
+    item.addEventListener("click", () => {
+      menuBar.classList.remove("open");
+      navBar.style.cssText = "transform:scaleY(0);";
+      navBar.style.maxHeight = "0px";
+    });
+  });
 });
