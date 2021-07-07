@@ -14,15 +14,18 @@
 
 ## Description
 
-This is actually made for practice purpose. It is not use for any other purpose, It project can include in my portifolio.
+This is the news website front page design where you can see the news are shown as recent news. In the sidebar, search box is given to search the news. In below the search section, you can see polpular news are shown.
 
-To See the demo: [Click Here](https://rawcdn.githack.com/aniloli42/news-site-template-design/5da518b6fda84879078f15d07d5b6432fef59c9e/index.html)
+For the news agency, if they want to earn from the ads they have the header ads feature as well. Ads can be implement in sidebar as well as in recent news section.
+
 
 #### Technologies
 
 - HTML
 - CSS
 - Javascript
+
+See Demo: [Click Here](https://rawcdn.githack.com/aniloli42/news-site-template-design/5da518b6fda84879078f15d07d5b6432fef59c9e/index.html)
 
 [Back To The Top](#fb-clone-design)
 
