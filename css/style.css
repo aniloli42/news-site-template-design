@@ -282,6 +282,7 @@ header nav .nav-item a:hover {
 .content-div .left-div .main-div .main-content {
   display: flex;
   gap: 15px;
+  margin-bottom: 10px;
 }
 
 .content-div .left-div .main-div .main-content .main-image-div {
